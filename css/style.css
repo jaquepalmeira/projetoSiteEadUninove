@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+
+
+/*font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Open Sans', sans-serif; */ 
+
+* {
+
+	box-sizing: border-box;
+}
+
+
+body{
+	margin:0 auto;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2,h3,h4,h5,h6{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 1.5px; /* espaçamento entre letras, melhor é este 1.5px*/
+}
+
+.
+img{
+	display:block;
+	max-width:100%;
+}
+
+.info_img{  /********ALINHANDO AS IMAGENS NO CENTRO DO BLOCO**************/
+	display:block;
+	max-width:100%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+.info_img_main{ /***********FLOAT COLOCA A IMAGEM A ESQUERDA OU A DIREITA DE UM TEXTO***************/
+	display:block;
+	max-width:100%;
+	float: left;
+
+}
+.header{
+	height:42px;
+	/*background:#f69d72; POR QUE USEI A IMAGEM COMO BANNER POR TRÁS DO MEU HEADER*/
+
+}
+
+.header .conteudo{
+	display: flex;
+	justify-content: space-between;
+}
+
+.conteudo,.conteudo2,.conteudo3{
+	margin:auto;
+	width:99%;
+	
+}
+
+.conteudo3{
+	margin-bottom: 80px;
+}
+
+.icon-menu{
+	margin:15px;
+	color:#FFF;
+
+}
+
+.image-logo, .logo-img{
+	display:block;
+	width:190px; /*tamanho do objeto*/
+	height:100px;
+	margin:3px 0px 0px 0px ; /*top right bottom left */
+}
+
+.icon-menu{
+
+	display:block;
+	width:40px; /*tamanho do objeto*/
+	height:40px;
+	font-size:30px;
+	background: #f69d72;
+	text-align:center;
+	line-height:45px; /*sempre legal ser um pouco maior que width*/
+	border-radius:5px;  /*radius pq quero borda arrendondada*/
+	margin-left:auto;
+	cursor:pointer; /*cursor do mouse com mãozinha */
+
+}
+
+.nav{
+	position:absolute; /*comando absolute ignora todas as config de margem feitas*/
+	top:60px;
+	left:-100%; 
+	width:100%;
+	transition: all 0.4s; /*all pq nao defini estilo de transição, 0.4 s é o tempo para a transição*/
+
+}
+
+.menu{
+	list-style:none;
+	padding:0; /*espaçamento entre os objetos*/
+	margin:0 20px;
+}
+
+.menu_link{
+	display:block;
+	padding:15px;
+	background:#f69d72;
+	text-decoration: none; /* tira o sublinhado dos links*/
+	color:#FFF; /*cor do texto*/
+}
+
+.menu_link:hover, .select{   /*altera a coloração do menu quando passamos o mouse*/
+	background:white;
+	color:#796c6c;
+
+}
+
+.mostrar{
+	left:0%;
+
+}
+
+.banner{
+	margin-top:-40px;
+	z-index:-1000;/*coloca o objeto para trás, so funciona com posição*/
+	position:relative;
+	margin-bottom:190px;
+	width: 100%;
+}
+
+
+.banner .conteudo{ /*Não posso usar só .conteudo pq ja tenho essa index, então coloco banner.coonteudo*/
+	position:absolute;
+	top:60%;
+	left:50%;
+	width:100%;
+	color:#FFF;
+	text-align:center;
+	transform:translateX(-50%) translateY(-50%); /* aqui peço para ele aparecer no centro com um efeito*/
+} 
+
+.banner_titulo{
+	font-size:23px;
+
+}
+
+.banner_txt{
+	display:none;
+
+}
+
+.info_coluna, .info_coluna_empresa, .info_coluna_servico, .info_coluna_servico2{
+	background:#76C7FC;
+	color:#FFF;
+	padding:15px;
+	margin:0px 5px;
+}
+.info_coluna_servico2{
+	background: #ADD8E6
+
+}
+
+.conteudo_link{
+	text-decoration: none; /* tira o sublinhado dos links*/
+	color:#FFF; /*cor do texto*/
+}
+
+
+
+
+.cursos_coluna, .empresa_coluna{
+	position:relative;
+	margin-bottom:80px;
+}
+
+
+
+.cursos_descricao{
+	position:absolute;
+	top:0;
+	left:0;
+	color:#FFF;
+	background: rgba(0,0,0,0.7); /*ultimo item do () é opacidade que varia de 0-1 */
+	width:70%;
+	height:100%;
+	padding:5px;
+
+}
+
+
+
+
+.cursos_titulo{
+	font-size:25px;
+	padding:5px 0; /*top/bottom px e lef/right, pode ter até 4 valores (b t l r) */
+}
+
+
+.section_titulo{
+	text-align:center;
+	font-size:35px;
+	color:#3CB371;
+}
+
+.footer{
+	background:#333;
+	color:#FFF;
+	padding:10px;
+	text-align: center;
+}
+
+.social [class^=icon-]{ /*os [] definem que ele estilize todas as classes que comecem com icon-*/
+	display:inline-block;
+	color:#333;
+	text-decoration:none;
+	font-size:30px;
+	padding:10px;
+	background:white;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	line-height: 40px;
+}
+/***************FORMATANDO FORMULÁRIO******************************/
+#formulario legend{ /*CONTATO*/
+        color:#333366;
+        font-weight:bold;
+         
+}
+#formulario fieldset{
+	padding:20px 10px 20px 10px;
+	margin-top: 20px;
+	margin-bottom: 80px;
+
+}
+#formulario label{
+	color:#f69d72;	
+	font-weight: bold;
+
+}
+input,select,textarea{
+	background-color:#f4f4f4 ;
+}
+.linha{
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.linha input[type=submit]{
+	border-radius: 5px;
+  	border: 1px solid #333;
+  	background-color: #f69d72;
+  	color: #fff;
+  	height: 30px;
+  	width: 80px;
+  	font-weight: bold;
+  	cursor: pointer;
+}
+
+.input.file{
+	border-radius: 5px;
+  	border: 1px solid #333;
+  	background-color: #f69d72;
+  	color: #fff;
+  	height: 30px;
+  	width: 120px;
+  	font-weight: bold;
+  	cursor: pointer;
+
+}
+
+
+
+
+
+
+/***********************************************************************/
+/***********************************************************************/
+/***********************************************************************/
+/*APLICANDO MIDIA QUERY PARA SITES RESPONSIVOS*/
+@media(min-width:480px){  /*para smartphones min=menor que posso usar and tb*/
+	
+	.banner .conteudo{
+		top:86%;
+	}
+
+	.banner_titulo{
+		font-size:30px;
+		margin:5px 0;
+
+	}
+
+	.banner_txt{
+		display:block;
+		font-size:16px;
+		margin:7px 0;
+	}
+
+	.info, .cursos, .info1,.info2{
+		display:flex;
+		justify-content: space-between;
+		margin-top:-90px;
+	}
+
+	.info_coluna {
+		width:32%;
+	}
+
+	.info_coluna_servico, .info_coluna_servico2{
+		width:50%;
+	}
+	.info_titulo{
+		font-size:25px;
+		margin:5px 0;
+	}
+	.section_titulo{
+		width:100%;		
+	}
+	.cursos{
+		flex-wrap:wrap; /*mantem um embaixo do outro*/
+		margin-top: 0;
+
+	}
+	.cursos_coluna{
+		width:49%; /*nao usamos 50% para nao colar um no outro*/
+
+	}
+
+	.empresa_coluna{
+		width:100%; /*nao usamos 50% para nao colar um no outro*/
+
+	}
+	.footer, .social[class^="icon-"]{
+		margin:0 10px;
+	}
+}
+
+
+@media(min-width:768px){ /*ṕara tablets ou smartphones na posição deitada*/
+	
+	.image-logo, .logo-img{
+	display:block;
+	width:200px; /*tamanho do objeto*/
+	height:120px;
+	margin:3px 0px 0px 0px ; /*top right bottom left */
+	}
+	.banner .conteudo{
+		top:86%;
+	}
+
+	.banner_titulo{
+		font-size: 50px;
+
+	}
+
+	.cursos_titulo{
+		font-size:40px;
+	}
+}
+
+@media(min-width: 1024px){
+
+	.image-logo, .logo-img{
+	display:block;
+	width:250px; /*tamanho do objeto*/
+	height:150px;
+	margin:3px 0px 0px 0px ; /*top right bottom left */
+	}
+	.conteudo{
+		width:1000px;
+
+	}
+
+	.section_titulo{
+		font-size:50px;
+		margin:30px 0;
+	}
+
+	.nav{
+		position:static;
+		width:auto;
+	}
+	.menu{
+		display:flex;
+	}
+	.icon-menu{
+		display:none;
+	}
+	.menu_link{
+		background: none;
+		font-size:20px;
+		color:#FFF;
+	}
+	.select{
+		color:#FFF;
+		background:#f69d72;
+	}
+
+	.banner .conteudo{
+		top:86%;
+	}
+
+	.banner_titulo{
+		font-size:60px;
+
+	}
+	.banner_txt{
+		font-size:25px;
+	}
+
+	.info{
+		margin-top:-120px;
+	}
+
+	.info1.info2{
+		margin-top:-140px;
+	}
+
+	.info_coluna, .info_coluna_empresa, .info_coluna_servico, .info_coluna_servico2{
+		padding:30px;
+	}
+	.info_titulo{
+		font-size:40px;
+		text-align: center;
+	}
+	.cursos_descricao{
+		padding:15px;
+		width: 73%;
+	}
+	.cursos_titulo{
+		font-size: 40px;
+	}
+	.cursos_txt, .info_txt_servico{
+		font-size: 20px;
+	}
+
+	.info,.info_txt_servico{
+		text-align: justify;
+	}
+	.info_txt_servico_main{
+		font-size:22px;
+		text-align: center;
+	}
+
+}
+
+
+@media(min-width:1280px){
+
+	.image-logo, .logo-img{
+	display:block;
+	width:350px; /*tamanho do objeto*/
+	height:140px;
+	margin:3px 0px 0px -30px ; /*top right bottom left */
+	}
+	.conteudo{
+		width:1200px;
+		margin:0 auto;
+	}
+
+	
+	.conteudo1,.conteudo2, .conteudo3{
+		width:1000px;
+		margin:135px auto;
+	}
+	
+	.banner .conteudo{
+		top:86%;
+	}
+	.info{
+		margin-top:-220px;
+	}
+
+
+}
